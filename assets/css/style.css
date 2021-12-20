@@ -40,6 +40,10 @@ p {
     margin-top: 2%;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* HEADER & NAV */
 
 header {
@@ -161,30 +165,41 @@ section {
     border: 6px solid var(--blue);
     position: relative;
     background: var(--gray);
-    transition: border 0.2s;
+    transition: border 0.2s, transform 0.2s;
 }
 
 .card-large:hover,
 .card-small:hover {
     border: 6px solid var(--red);
+    transform: scale(1.04);
+    z-index: 2;
 }
 
 .card-large {
-    height: 400px;
+    height: 500px;
     width: 300px;
     flex: 1 0 95%;
 }
 
 .card-small {
-    height: 200px;
+    height: 300px;
     flex: 1 0 45%;
 }
 
 .card-content {
     position: absolute;
     bottom: 20px;
+    left: -1px;
     background-color: var(--blue);
     padding: 20px 12px;
+}
+
+.card-content h3 a {
+    color: var(--red);
+}
+
+.card-content h3 a:visited {
+    color: var(--red);
 }
 
 .card-title, .card-subtitle {
@@ -223,6 +238,7 @@ section {
     text-decoration: none;
     padding: 15px;
     border-bottom: 4px solid var(--blue);
+    color: var(--blue);
     transition: color 0.3s, background-color 0.3s;
 }
 
@@ -250,6 +266,26 @@ footer img {
 
 footer img:hover {
     transform: rotate(360deg);
+}
+
+#calculator {
+    background-image: url("/assets/images/calculator-preview.png");
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+#tic-tac-toe {
+    background-image: url("/assets/images/tic-tac-toe-preview.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#library {
+    background-image: url("/assets/images/library-preview.png");
+    background-position: center;
+    background-size: cover;
 }
 
 /* MEDIA QUERIES */
