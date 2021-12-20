@@ -47,22 +47,28 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: var(--blue);
-    padding: 15px 0 0 0;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
     min-width: 300px;
-    padding: 15px 0;
+    padding: 15px;
 }
 
 nav a {
     color: var(--white);
+    font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
-    margin: 0 12px;
+    padding: 2px;
+    margin: 0 20px;
     border-bottom: 4px solid var(--red);
+    transition: background-color 0.2s;
+}
+
+nav a:hover {
+    background-color: var(--red);
 }
 
 nav a:visited {
@@ -83,17 +89,39 @@ main {
 .hero {
     background: var(--gray);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 400px;
+    position: relative;
 }
 
 .hero img {
+    position: relative;
     width: 250px;
     border-radius: 100%;
     border: 5px solid var(--white);
+    margin: 10px;
+    top: 0;
+    transition: top ease 0.2s, transform ease 0.2s;
+}
+
+.hero img:hover {
+    top: -10px;
+    transform: rotate(-7deg);
+}
+
+.hero div p {
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.hero .hero-content {
+    margin: 10px;;
+}
+
+.hero .hero-content h2:hover::after {
+    content: '👋';
 }
 
 /* SECTION */
@@ -111,12 +139,18 @@ section {
     padding-right: 20px;
 }
 
+.section-title:hover::before {
+    content: '#';
+    color: var(--gray);
+}
+
 .section-content {
     flex: 1 0 75%;
     display: flex;
     flex-wrap: wrap;
     border-left: 5px dotted var(--blue);
     padding-left: 25px;
+    transition: background-color ease 0.2s;
 }
 
 .section-content > div {
@@ -124,9 +158,15 @@ section {
 }
 
 .card-large, .card-small {
-    border: 6px dashed var(--red);
+    border: 6px solid var(--blue);
     position: relative;
     background: var(--gray);
+    transition: border 0.2s;
+}
+
+.card-large:hover,
+.card-small:hover {
+    border: 6px solid var(--red);
 }
 
 .card-large {
@@ -143,34 +183,73 @@ section {
 .card-content {
     position: absolute;
     bottom: 20px;
-
     background-color: var(--blue);
-    color: var(--red);
-
     padding: 20px 12px;
 }
 
-.card-content p {
+.card-title, .card-subtitle {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.card-subtitle {
+    color: var(--white);
+}
+
+.card-title {
+    color: var(--red);
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.card-title:hover::before {
+    content: '<';
+    color: var(--white);
+}
+.card-title:hover::after {
+    content: '/>';
     color: var(--white);
 }
 
 /* CONTACT */
 
-.contact-links {
-    display: flex;
+#contact .section-content {
+    display:flex;
     justify-content: center;
 }
 
 .contact-link {
-    margin: 0 20px;
+    margin: 20px;
     font-weight: bold;
     text-decoration: none;
-    color: var(--red);
+    padding: 15px;
     border-bottom: 4px solid var(--blue);
+    transition: color 0.3s, background-color 0.3s;
+}
+
+#contact div a:hover {
+    color: var(--white);
+    background-color: var(--blue);
 }
 
 .contact-link:visited {
     color: var(--blue);
+}
+
+footer {
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+}
+
+footer img {
+    width: 60%;
+    transition: transform 1s;
+}
+
+footer img:hover {
+    transform: rotate(360deg);
 }
 
 /* MEDIA QUERIES */
@@ -189,6 +268,16 @@ section {
     }
     nav a {
         border-bottom: 4px solid var(--blue);
+    }
+    nav a:hover {
+        background-color: var(--blue);
+    }
+    .hero {
+        flex-direction: column;
+    }
+    .hero .hero-content {
+        margin: 10px;
+        text-align: center;
     }
     section {
         flex-direction: column;
