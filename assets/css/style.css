@@ -66,7 +66,7 @@ nav a {
 }
 
 nav a:visited {
-    color: var(--blue);
+    color: var(--white);
 }
 
 /* MAIN */
@@ -96,21 +96,30 @@ main {
     border: 5px solid var(--white);
 }
 
-.section { 
-    padding: 2%;
+/* SECTION */
+section {
+    display: flex;
+    justify-content: center;
+    max-width: 90%;
+    margin: 25px 0;
 }
 
-/* ABOUT ME */
+.section-title {
+    flex: 1 0 25%;
+    align-self: center;
+    text-align: right;
+    padding-right: 20px;
+}
 
-/* PROJECTS */
-
-.projects-container {
+.section-content {
+    flex: 1 0 75%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    border-left: 5px dotted var(--blue);
+    padding-left: 25px;
 }
 
-.projects-container > div {
+.section-content > div {
     margin: 6px;
 }
 
@@ -122,6 +131,7 @@ main {
 
 .card-large {
     height: 400px;
+    width: 300px;
     flex: 1 0 95%;
 }
 
@@ -132,7 +142,7 @@ main {
 
 .card-content {
     position: absolute;
-    bottom: 24px;
+    bottom: 20px;
 
     background-color: var(--blue);
     color: var(--red);
@@ -152,10 +162,9 @@ main {
 }
 
 .contact-link {
-    margin: 0 12px;
+    margin: 0 20px;
     font-weight: bold;
     text-decoration: none;
-    margin: 0 12px;
     color: var(--red);
     border-bottom: 4px solid var(--blue);
 }
@@ -181,18 +190,36 @@ main {
     nav a {
         border-bottom: 4px solid var(--blue);
     }
+    section {
+        flex-direction: column;
+        max-width: 100%;
+        margin: 15px 25px;
+    }
+    .section-title {
+        align-self: flex-start;
+    }
+    .section-content {
+        border-top: 5px dotted var(--blue);
+        border-left: none;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
     .card-small, .card-large {
         flex: 1 1 80%;
-    }
-    main h2 {
-        border-bottom: 4px dotted var(--blue);
-        margin: 2% 0;
-        padding: 6px 0;
     }
 }
 
 /* Large Smartphones */
 @media screen and (max-width: 768px) {
+    nav ul {
+        align-items: center;
+        flex-direction: column;
+        min-width: 300px;
+        padding: 15px 0;
+    }
+    nav li {
+        margin: 8px 0;
+    }
 }
 
 /* Small Smartphones */
