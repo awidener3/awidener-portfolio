@@ -67,12 +67,15 @@ nav a {
     text-decoration: none;
     padding: 2px;
     margin: 0 20px;
-    border-bottom: 4px solid var(--red);
-    transition: background-color 0.2s;
+    background-image: linear-gradient(270deg, var(--red) 0%, var(--red) 100%);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 15%;
+    transition: background-size 0.3s;
 }
 
 nav a:hover {
-    background-color: var(--red);
+    background-size: 100% 100%;
 }
 
 nav a:visited {
@@ -164,15 +167,29 @@ section {
 .card-large, .card-small {
     border: 6px solid var(--blue);
     position: relative;
-    background: var(--gray);
-    transition: border 0.2s, transform 0.2s;
+    transition: border 0.2s, transform 0.2s, background-color 0.2s;
+    background-color: #30475E88;
+    background-blend-mode: soft-light;
 }
 
 .card-large:hover,
 .card-small:hover {
     border: 6px solid var(--red);
     transform: scale(1.04);
+    background-color: #30475E00;
     z-index: 2;
+}
+
+.card-large:hover .card-content .card-title::before,
+.card-small:hover .card-content .card-title::before {
+    content: '<';
+    color: var(--white);
+}
+
+.card-large:hover .card-content .card-title::after,
+.card-small:hover .card-content .card-title::after {
+    content: '/>';
+    color: var(--white);
 }
 
 .card-large {
@@ -193,6 +210,7 @@ section {
     background-color: var(--blue);
     padding: 20px 12px;
 }
+
 
 .card-content h3 a {
     color: var(--red);
@@ -216,15 +234,6 @@ section {
     font-size: 1.2rem;
 }
 
-.card-title:hover::before {
-    content: '<';
-    color: var(--white);
-}
-.card-title:hover::after {
-    content: '/>';
-    color: var(--white);
-}
-
 /* CONTACT */
 
 #contact .section-content {
@@ -237,19 +246,20 @@ section {
     font-weight: bold;
     text-decoration: none;
     padding: 15px;
-    border-bottom: 4px solid var(--blue);
+    background-image: linear-gradient(270deg, var(--blue) 0%, var(--blue) 100%);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 8%;
     color: var(--blue);
-    transition: color 0.3s, background-color 0.3s;
+    transition: color 0.3s, background-size 0.3s;
 }
 
-#contact div a:hover {
+.contact-link:hover {
     color: var(--white);
-    background-color: var(--blue);
+    background-size: 100% 100%;
 }
 
-.contact-link:visited {
-    color: var(--blue);
-}
+/* FOOTER */
 
 footer {
     background-color: var(--blue);
@@ -268,24 +278,33 @@ footer img:hover {
     transform: rotate(360deg);
 }
 
-#calculator {
-    background-image: url("/assets/images/calculator-preview.png");
+#calculator, 
+#tic-tac-toe, 
+#library, 
+#restaurant-page,
+#etch-a-sketch {
     background-position: center;
     background-size: cover;
 }
 
-
+#calculator {
+    background-image: url("/assets/images/calculator-preview.png");
+}
 
 #tic-tac-toe {
     background-image: url("/assets/images/tic-tac-toe-preview.png");
-    background-position: center;
-    background-size: cover;
 }
 
 #library {
     background-image: url("/assets/images/library-preview.png");
-    background-position: center;
-    background-size: cover;
+}
+
+#restaurant-page {
+    background-image: url("/assets/images/restaurant-page-preview.png");
+}
+
+#etch-a-sketch {
+    background-image: url("/assets/images/etch-a-sketch-preview.png");
 }
 
 /* MEDIA QUERIES */
@@ -303,10 +322,7 @@ footer img:hover {
         background-color: var(--red);
     }
     nav a {
-        border-bottom: 4px solid var(--blue);
-    }
-    nav a:hover {
-        background-color: var(--blue);
+        background-image: linear-gradient(270deg, var(--blue) 0%, var(--blue) 100%);
     }
     .hero {
         flex-direction: column;
@@ -331,6 +347,9 @@ footer img:hover {
     }
     .card-small, .card-large {
         flex: 1 1 80%;
+    }
+    #calculator, #tic-tac-toe, #library, #restaurant-page, #etch-a-sketch {
+        background-position: top;
     }
 }
 
