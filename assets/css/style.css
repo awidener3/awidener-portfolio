@@ -167,9 +167,7 @@ section {
 .card-large, .card-small {
     border: 6px solid var(--blue);
     position: relative;
-    transition: border 0.2s, transform 0.2s, background-color 0.2s;
-    background-color: #30475E88;
-    background-blend-mode: soft-light;
+    transition: border 0.2s, transform 0.2s;
 }
 
 .card-large:hover,
@@ -192,6 +190,11 @@ section {
     color: var(--white);
 }
 
+.card-large:hover .card-image,
+.card-small:hover .card-image {
+    opacity: 1;
+}
+
 .card-large {
     height: 500px;
     width: 300px;
@@ -210,7 +213,6 @@ section {
     background-color: var(--blue);
     padding: 20px 12px;
 }
-
 
 .card-content h3 a {
     color: var(--red);
@@ -232,6 +234,14 @@ section {
     color: var(--red);
     text-align: center;
     font-size: 1.2rem;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.7;
 }
 
 /* CONTACT */
@@ -278,35 +288,6 @@ footer img:hover {
     transform: rotate(360deg);
 }
 
-#calculator, 
-#tic-tac-toe, 
-#library, 
-#restaurant-page,
-#etch-a-sketch {
-    background-position: center;
-    background-size: cover;
-}
-
-#calculator {
-    background-image: url("/assets/images/calculator-preview.png");
-}
-
-#tic-tac-toe {
-    background-image: url("/assets/images/tic-tac-toe-preview.png");
-}
-
-#library {
-    background-image: url("/assets/images/library-preview.png");
-}
-
-#restaurant-page {
-    background-image: url("/assets/images/restaurant-page-preview.png");
-}
-
-#etch-a-sketch {
-    background-image: url("/assets/images/etch-a-sketch-preview.png");
-}
-
 /* MEDIA QUERIES */
 
 /* Tablets */
@@ -347,9 +328,6 @@ footer img:hover {
     }
     .card-small, .card-large {
         flex: 1 1 80%;
-    }
-    #calculator, #tic-tac-toe, #library, #restaurant-page, #etch-a-sketch {
-        background-position: top;
     }
 }
 
