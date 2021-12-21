@@ -12,9 +12,10 @@
     box-sizing: border-box;
 }
 
+/* DOCUMENT SETUP & COLOR */
+
 body {
     font-family: Verdana, sans-serif;
-
     display: flex;
     flex-direction: column;
     line-height: 1.3;
@@ -44,6 +45,18 @@ a {
     text-decoration: none;
 }
 
+.card-title, .card-subtitle {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.card-content h3 a, .card-title {
+    color: var(--red);
+}
+
+.card-subtitle {
+    color: var(--white);
+}
+
 /* HEADER & NAV */
 
 header {
@@ -60,25 +73,41 @@ nav ul {
     padding: 15px;
 }
 
-nav a {
-    color: var(--white);
-    font-size: 1.2rem;
+/* LINKS */
+
+.nav-link,
+.contact-link {
     font-weight: bold;
     text-decoration: none;
-    padding: 2px;
-    margin: 0 20px;
-    background-image: linear-gradient(270deg, var(--red) 0%, var(--red) 100%);
+    margin: 20px;
     background-position: bottom;
     background-repeat: no-repeat;
+}
+
+.nav-link {
+    color: var(--white);
+    font-size: 1.2rem;
+    padding: 2px;
+    background-image: linear-gradient(270deg, var(--red) 0%, var(--red) 100%);
     background-size: 100% 15%;
     transition: background-size 0.3s;
 }
 
-nav a:hover {
+.contact-link {
+    padding: 15px;
+    background-image: linear-gradient(270deg, var(--blue) 0%, var(--blue) 100%);
+    background-size: 100% 8%;
+    color: var(--blue);
+    transition: color 0.3s, background-size 0.3s;
+}
+
+/* handle hover effect */
+.nav-link:hover,
+.contact-link:hover {
     background-size: 100% 100%;
 }
 
-nav a:visited {
+.contact-link:hover {
     color: var(--white);
 }
 
@@ -91,50 +120,47 @@ main {
     margin: 0 auto;
 }
 
-/* BANNER */
+/* HERO BANNER */
 
 .hero {
     background: var(--gray);
-    display: flex;
-    justify-content: center;
     align-items: center;
     width: 100%;
     height: 400px;
-    position: relative;
+}
+
+.hero img,
+.hero-content {
+    margin: 10px;
 }
 
 .hero img {
-    position: relative;
     width: 250px;
-    border-radius: 100%;
     border: 5px solid var(--white);
-    margin: 10px;
+    border-radius: 100%;
+    position: relative;
     top: 0;
     transition: top ease 0.2s, transform ease 0.2s;
 }
 
+.hero-content p {
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+/* image animation */
 .hero img:hover {
     top: -10px;
     transform: rotate(-7deg);
 }
 
-.hero div p {
-    font-style: italic;
-    font-size: 1.1rem;
-}
-
-.hero .hero-content {
-    margin: 10px;;
-}
-
-.hero .hero-content h2:hover::after {
+/* stylistic wave after header */
+.hero-content h2:hover::after {
     content: '👋';
 }
 
 /* SECTION */
 section {
-    display: flex;
-    justify-content: center;
     max-width: 90%;
     margin: 25px 0;
 }
@@ -146,6 +172,7 @@ section {
     padding-right: 20px;
 }
 
+/* add # stylization on hover */
 .section-title:hover::before {
     content: '#';
     color: var(--gray);
@@ -153,47 +180,17 @@ section {
 
 .section-content {
     flex: 1 0 75%;
-    display: flex;
     flex-wrap: wrap;
     border-left: 5px dotted var(--blue);
     padding-left: 25px;
     transition: background-color ease 0.2s;
 }
 
-.section-content > div {
+.section-content > figure {
     margin: 6px;
 }
 
-.card-large, .card-small {
-    border: 6px solid var(--blue);
-    position: relative;
-    transition: border 0.2s, transform 0.2s;
-}
-
-.card-large:hover,
-.card-small:hover {
-    border: 6px solid var(--red);
-    transform: scale(1.04);
-    background-color: #30475E00;
-    z-index: 2;
-}
-
-.card-large:hover .card-content .card-title::before,
-.card-small:hover .card-content .card-title::before {
-    content: '<';
-    color: var(--white);
-}
-
-.card-large:hover .card-content .card-title::after,
-.card-small:hover .card-content .card-title::after {
-    content: '/>';
-    color: var(--white);
-}
-
-.card-large:hover .card-image,
-.card-small:hover .card-image {
-    opacity: 1;
-}
+/* CARDS */
 
 .card-large {
     height: 500px;
@@ -206,6 +203,39 @@ section {
     flex: 1 0 45%;
 }
 
+.card-large, .card-small {
+    border: 6px solid var(--blue);
+    position: relative;
+    transition: border 0.2s, transform 0.2s;
+}
+
+/* handle scale and border of card */
+.card-large:hover,
+.card-small:hover {
+    border: 6px solid var(--red);
+    transform: scale(1.04);
+    background-color: #30475E00;
+    z-index: 2;
+}
+
+/* handle stylizing of project title 1 */
+.card-large:hover .card-content .card-title::before,
+.card-small:hover .card-content .card-title::before {
+    content: '<';
+    color: var(--white);
+}
+.card-large:hover .card-content .card-title::after,
+.card-small:hover .card-content .card-title::after {
+    content: '/>';
+    color: var(--white);
+}
+
+/* handle stylizing of other projects on hover */
+.card-large:hover .card-image,
+.card-small:hover .card-image {
+    opacity: 1;
+}
+
 .card-content {
     position: absolute;
     bottom: 20px;
@@ -214,24 +244,7 @@ section {
     padding: 20px 12px;
 }
 
-.card-content h3 a {
-    color: var(--red);
-}
-
-.card-content h3 a:visited {
-    color: var(--red);
-}
-
-.card-title, .card-subtitle {
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.card-subtitle {
-    color: var(--white);
-}
-
 .card-title {
-    color: var(--red);
     text-align: center;
     font-size: 1.2rem;
 }
@@ -244,36 +257,10 @@ section {
     opacity: 0.7;
 }
 
-/* CONTACT */
-
-#contact .section-content {
-    display:flex;
-    justify-content: center;
-}
-
-.contact-link {
-    margin: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 15px;
-    background-image: linear-gradient(270deg, var(--blue) 0%, var(--blue) 100%);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: 100% 8%;
-    color: var(--blue);
-    transition: color 0.3s, background-size 0.3s;
-}
-
-.contact-link:hover {
-    color: var(--white);
-    background-size: 100% 100%;
-}
-
 /* FOOTER */
 
 footer {
     background-color: var(--blue);
-    display: flex;
     justify-content: center;
     width: 100%;
     padding: 12px;
@@ -288,6 +275,15 @@ footer img:hover {
     transform: rotate(360deg);
 }
 
+/* FLEX PROPERTIES */
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
 /* MEDIA QUERIES */
 
 /* Tablets */
@@ -295,25 +291,21 @@ footer img:hover {
     main {
         max-width: 992px;
     }
-    header {
+    header, section, .hero {
         flex-direction: column;
     }
     nav {
         width: 100%;
         background-color: var(--red);
     }
-    nav a {
+    .nav-link {
         background-image: linear-gradient(270deg, var(--blue) 0%, var(--blue) 100%);
     }
-    .hero {
-        flex-direction: column;
-    }
-    .hero .hero-content {
+    .hero-content {
         margin: 10px;
         text-align: center;
     }
     section {
-        flex-direction: column;
         max-width: 100%;
         margin: 15px 25px;
     }
@@ -331,7 +323,7 @@ footer img:hover {
     }
 }
 
-/* Large Smartphones */
+/* Large Smartphones and Smaller */
 @media screen and (max-width: 768px) {
     nav ul {
         align-items: center;
@@ -342,8 +334,4 @@ footer img:hover {
     nav li {
         margin: 8px 0;
     }
-}
-
-/* Small Smartphones */
-@media screen and (max-width: 576px) {
 }

@@ -22,31 +22,30 @@
         <!-- NAVBAR -->
         <nav>
             <ul>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact Me</a></li>
-                <li><a href="#">Resume</a></li>
+                <li><a class="nav-link" href="#about-me">About Me</a></li>
+                <li><a class="nav-link" href="#projects">Projects</a></li>
+                <li><a class="nav-link" href="#contact">Contact Me</a></li>
+                <li><a class="nav-link" href="#">Resume</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- HERO IMAGE -->
-    <div class="hero">
+    <figure class="hero flex flex-center">
         <img src="./assets/images/headshot-01.jpg" alt="A headshot of Alex Widener">
-        <div class="hero-content">
+        <article class="hero-content">
             <h2>Hi! I'm Alex.</h2>
             <p>I'm a Full-Stack Web Developer based in Florida.</p>
-        </div>
-
-    </div>
+        </article>
+    </figure>
 
     <!-- MAIN -->
     <main>
 
         <!-- ABOUT ME -->
-        <section id="about-me" class="section">
+        <section id="about-me" class="section flex flex-center">
             <h2 class="section-title">About Me</h2>
-            <div class="section-content">
+            <article class="section-content flex">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error reprehenderit suscipit itaque dolorem
                     adipisci repellendus, obcaecati ad voluptas inventore unde. Necessitatibus nulla ratione earum in?
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea in quod doloribus ratione. Lorem ipsum
@@ -55,90 +54,89 @@
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, consequatur corrupti! Eum numquam
                     nesciunt dicta consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
                     nulla quas excepturi nostrum officia amet sed a ex esse?</p>
-            </div>
+            </article>
 
         </section>
 
         <!-- PROJECTS -->
-        <section id="projects" class="section">
+        <section id="projects" class="section flex flex-center">
             <h2 class="section-title">Projects</h2>
 
-            <div class="section-content">
-
-                <div id="calculator" class="card-large">
+            <div class="section-content flex">
+                <figure id="calculator" class="card-large">
                     <a href="https://awidener3.github.io/basic-calculator/" target="_blank" rel="noopener noreferrer">
                         <img class="card-image" src="/assets/images/calculator-preview.png"
                             alt="a preview of a calculator project">
                     </a>
-                    <div class="card-content">
+                    <article class="card-content">
                         <h3 class="card-title"><a href="https://awidener3.github.io/basic-calculator/" target="_blank"
                                 rel="noopener noreferrer">Calculator</a></h3>
                         <p class="card-subtitle">HTML, CSS, JavaScript</p>
-                    </div>
-                </div>
+                    </article>
+                </figure>
 
-                <div id="tic-tac-toe" class="card-small">
+                <figure id="tic-tac-toe" class="card-small">
                     <a href="https://awidener3.github.io/tic-tac-toe/" target="_blank" rel="noopener noreferrer">
                         <img class="card-image" src="/assets/images/tic-tac-toe-preview.png"
                             alt="a preview of a tic-tac-toe project">
                     </a>
-                    <div class="card-content">
+                    <article class="card-content">
                         <h3 class="card-title"><a href="https://awidener3.github.io/tic-tac-toe/" target="_blank"
                                 rel="noopener noreferrer">Tic-Tac-Toe</a></h3>
                         <p class="card-subtitle">HTML, CSS, JavaScript</p>
-                    </div>
-                </div>
+                    </article>
+                </figure>
 
-                <div id="library" class="card-small">
+                <figure id="library" class="card-small">
                     <a href="https://awidener3.github.io/odin-library/" target="_blank" rel="noopener noreferrer">
                         <img class="card-image" src="/assets/images/library-preview.png"
                             alt="a preview of a library project">
                     </a>
-                    <div class="card-content">
+                    <article class="card-content">
                         <h3 class="card-title"><a href="https://awidener3.github.io/odin-library/" target="_blank"
                                 rel="noopener noreferrer">Library</a></h3>
                         <p class="card-subtitle">HTML, CSS, JavaScript</p>
-                    </div>
-                </div>
+                    </article>
+                </figure>
 
-                <div id="restaurant-page" class="card-small">
+                <figure id="restaurant-page" class="card-small">
                     <a href="https://awidener3.github.io/restaurant-page/" target="_blank" rel="noopener noreferrer">
                         <img class="card-image" src="/assets/images/restaurant-page-preview.png"
                             alt="a preview of a restaurant website project">
                     </a>
-                    <div class="card-content">
+                    <article class="card-content">
                         <h3 class="card-title"><a href="https://awidener3.github.io/restaurant-page/" target="_blank"
                                 rel="noopener noreferrer">Restaurant Page</a></h3>
                         <p class="card-subtitle">JavaScript, Webpack</p>
-                    </div>
-                </div>
+                    </article>
+                </figure>
 
-                <div id="etch-a-sketch" class="card-small">
+                <figure id="etch-a-sketch" class="card-small">
                     <a href="https://awidener3.github.io/etch-a-sketch/" target="_blank" rel="noopener noreferrer">
                         <img class="card-image" src="/assets/images/etch-a-sketch-preview.png"
                             alt="a preview of a etch-a-sketch project">
                     </a>
-                    <div class="card-content">
+                    <article class="card-content">
                         <h3 class="card-title"><a href="https://awidener3.github.io/etch-a-sketch/" target="_blank"
                                 rel="noopener noreferrer">Etch-a-Sketch</a></h3>
                         <p class="card-subtitle">HTML, CSS, JavaScript</p>
-                    </div>
-                </div>
+                    </article>
+                </figure>
             </div>
 
         </section>
 
         <!-- CONTACT -->
-        <section id="contact" class="section">
+        <section id="contact" class="section flex flex-center">
             <h2 class="section-title">Contact Me</h2>
-            <div class="section-content">
+            <article class="section-content flex flex-center">
                 <a href="https://www.github.com/awidener3" class="contact-link fa fa-github fa-3x" target="_blank"
                     rel="noopener noreferrer"></a>
                 <a href="https://twitter.com/awidener3" class="contact-link fa fa-twitter fa-3x" target="_blank"
                     rel="noopener noreferrer"></a>
                 <a href="https://www.linkedin.com/in/alex-widener/" class="contact-link fa fa-linkedin fa-3x"
                     target="_blank" rel="noopener noreferrer"></a>
-            </div>
+            </article>
 
         </section>
 
@@ -146,7 +144,7 @@
 
     <!-- FOOTER -->
 
-    <footer>
+    <footer class="flex">
         <a href="https://www.github.com/awidener3" target="_blank" rel="noopener noreferrer"><img
                 src="./assets/images/GitHub-Mark-Light-64px.png" alt="GitHub logo"></a>
     </footer>
