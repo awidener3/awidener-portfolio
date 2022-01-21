@@ -338,6 +338,9 @@ footer img:hover {
     .card-small, .card-large {
         flex: 1 1 80%;
     }
+    .card-large {
+        width: auto;
+    }
 }
 
 /* Large Smartphones and Smaller */
@@ -349,7 +352,6 @@ footer img:hover {
         margin: 0px;
     }
     .nav-link {
-        margin: 2px 0;
         margin: 10px;
         font-size: 1.5rem;
     }
