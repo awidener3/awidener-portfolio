@@ -276,8 +276,13 @@ footer {
     padding: 12px;
 }
 
+footer a {
+    display: flex;
+}
+
 footer img {
     width: 60%;
+    margin: 0 auto;
     transition: transform 1s;
 }
 
