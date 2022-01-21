@@ -106,9 +106,6 @@ nav ul {
 .nav-link:hover,
 .contact-link:hover {
     background-size: 100% 100%;
-}
-
-.contact-link:hover {
     color: var(--white);
 }
 
