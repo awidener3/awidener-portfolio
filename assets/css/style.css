@@ -14,7 +14,12 @@
 
 /* DOCUMENT SETUP & COLOR */
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
+    position: relative;
     Font-Family: 'Open Sans', Sans-Serif;
     Font-Size: 15px;
     display: flex;
