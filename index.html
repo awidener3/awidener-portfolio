@@ -29,7 +29,7 @@
             <ul>
                 <li><a class="nav-link" href="#about-me">About Me</a></li>
                 <li><a class="nav-link" href="#projects">Projects</a></li>
-                <li><a class="nav-link" href="#contact">Contact Me</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
                 <li><a class="nav-link" href="https://docs.google.com/document/d/1z0RBeQtgzfgUHwhsUOgACuBdgqPmOwDS3FeHnpAy-Og/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></li>
             </ul>
         </nav>
@@ -40,8 +40,8 @@
         <!-- headshot image -->
         <img src="./assets/images/headshot-01.jpg" alt="A headshot of Alex Widener">
         <article class="hero-content">
-            <h2>Hi! I'm Alex.</h2>
-            <p>I'm a Full-Stack Web Developer based in Florida.</p>
+            <h2 class="display-5">Hi! I'm Alex.</h2>
+            <p class="lead">I'm a Full-Stack Web Developer based in Florida.</p>
         </article>
     </figure>
 
@@ -137,52 +137,24 @@
 
         <!-- CONTACT -->
         <section id="contact" class="section flex flex-center">
-            <h2 class="section-title">Contact Me</h2>
+            <h2 class="section-title">Contact</h2>
+            
             <article class="section-content flex flex-center">
-                <!-- github icon -->
-                <a href="https://www.github.com/awidener3" class="contact-link fa fa-github fa-3x" target="_blank"
-                    rel="noopener noreferrer"></a>
-                <!-- twitter icon -->
-                <a href="https://twitter.com/awidener3" class="contact-link fa fa-twitter fa-3x" target="_blank"
-                    rel="noopener noreferrer"></a>
-                <!-- linkedin icon -->
-                <a href="https://www.linkedin.com/in/alex-widener/" class="contact-link fa fa-linkedin fa-3x"
-                    target="_blank" rel="noopener noreferrer"></a>
-                <!-- email icon -->
-                <a href="" class="contact-link fa fa-envelope fa-3x"
-                target="_blank" rel="noopener noreferrer" data-bs-toggle="modal" data-bs-target="#emailModal"></a>
+                <!-- github link -->
+                <a href="https://www.github.com/awidener3" class="contact-link fa fa-github fa-3x" target="_blank" rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-html="true" title="https://www.github.com/awidener3"></a>
+                <!-- twitter link -->
+                <a href="https://twitter.com/awidener3" class="contact-link fa fa-twitter fa-3x" target="_blank" rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-html="true" title="https://twitter.com/awidener3"></a>
+                <!-- linkedin link -->
+                <a href="https://www.linkedin.com/in/alex-widener/" class="contact-link fa fa-linkedin fa-3x" target="_blank" rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-html="true" title="https://www.linkedin.com/in/alex-widener/"></a>
+                <!-- email link -->
+                <a href="mailto:awidener3@gmail.com" class="contact-link fa fa-envelope fa-3x" target="_blank" rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-html="true" title="awidener3@gmail.com"></a>
+                <!-- phone link -->
+                <a href="tel:321-271-5102" class="contact-link fa fa-phone fa-3x" target="_blank" rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-html="true" title="(321) 271-5102"></a>
             </article>
 
         </section>
 
     </main>
-
-    <!-- MODAL -->
-    
-    <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Send me an Email!</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="mb-3">
-                    <label for="emailFormEmail" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="emailFormEmail" placeholder="name@example.com">
-                  </div>
-                  <div class="mb-3">
-                    <label for="emailFormText" class="form-label">Message</label>
-                    <textarea class="form-control" id="emailFormText" rows="3"></textarea>
-                </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Send</button>
-            </div>
-          </div>
-        </div>
-      </div>
 
     <!-- FOOTER -->
 
