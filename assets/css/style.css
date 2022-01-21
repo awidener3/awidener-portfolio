@@ -15,11 +15,17 @@
 /* DOCUMENT SETUP & COLOR */
 
 body {
-    font-family: Verdana, sans-serif;
+    Font-Family: 'Open Sans', Sans-Serif;
+    Font-Size: 15px;
     display: flex;
     flex-direction: column;
     line-height: 1.3;
     color: var(--black);
+}
+
+h1, h2, h3 {
+    Font-Family: 'Ubuntu', Sans-Serif;
+    Font-Size: 48px;
 }
 
 h1 {
