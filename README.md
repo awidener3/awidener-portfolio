@@ -9,9 +9,9 @@ Create a professional portfolio that displays information about myself, along wi
 - Bootstrap
 
 ## 🔍 Preview
-![A gif of my portfolio](./assets/images/portfolio-preview-gif.gif)
-
 ![A preview of my portfolio](./assets/images/portfolio-preview.png)
+
+![A preview of my portfolio on a mobile device](./assets/images/portfolio-preview-phone.png)
 
 ## 📝 User Story
 ```
