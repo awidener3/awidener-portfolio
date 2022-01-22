@@ -1,8 +1,12 @@
-# 📝 Homework Assignment #2: Professional Portfolio
-📌[Link to Live Website](https://awidener3.github.io/awidener-portfolio/)
+# Alex Widener Portfolio
+📌[Link to Live Application](https://awidener3.github.io/awidener-portfolio/)
 
 ## 🔨 Task
 Create a professional portfolio that displays information about myself, along with projects that I have created and links to my social media accounts and GitHub account.
+
+## 💻 Tech Stack
+- HTML/CSS/JavaScript
+- Bootstrap
 
 ## 🔍 Preview
 ![A gif of my portfolio](./assets/images/portfolio-preview-gif.gif)
