@@ -204,7 +204,7 @@ section {
 }
 
 .card-large, .card-small {
-    border: 6px solid var(--black);
+    border: 3px solid var(--black);
     position: relative;
     transition: border 0.2s, transform 0.2s;
 }
@@ -212,7 +212,7 @@ section {
 /* handle scale and border of card */
 .card-large:hover,
 .card-small:hover {
-    border: 6px solid var(--blue);
+    border: 3px solid var(--blue);
     transform: scale(1.04);
     background-color: #30475E00;
     z-index: 2;
