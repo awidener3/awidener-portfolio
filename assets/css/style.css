@@ -310,7 +310,7 @@ footer img:hover {
         align-self: flex-start;
     }
     .section-content {
-        border-top: 5px dotted var(--blue);
+        border-top: 2px solid var(--blue);
         border-left: none;
         padding-left: 25px;
         padding-right: 25px;
